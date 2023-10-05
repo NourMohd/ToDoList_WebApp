@@ -1,0 +1,43 @@
+<%- include("header") %>
+  <div class="container">
+    <form class="searchOrCreate" action="/searchOrCreateList" method="post">
+      <input type="text" placeholder="Search for list or Create" name="searchOrCreateText" , autocomplete="off" />
+      <button type="submit" name="searchOrCreateButton"><i class="fas fa-arrow-right fa-1x"></i></button>
+    </form>
+    <div class="main-pad">
+      <div class="heading">
+        <h1 class="listTitle">
+          <%= listTitle %> <br>
+          <%= date %>
+        </h1>
+      </div>
+      <div class="content">
+        <ul>
+          <form action="/add" class="additem" method="post">
+            <input type="text" placeholder="New item" name="newItem" , autocomplete="off" required/>
+            <button type="submit" name="currentList" value="<%= listTitle %>">+</button>
+          </form>
+
+          <%if(locals.list){%>
+            <%list.forEach((item)=> { %>
+              <li style="list-style: none">
+
+                <form class="delete-form" action="/delete" method="post">
+                  <input type="checkbox" id="checkboxId" name="checkboxName" value="<%= item._id %>"
+                    onchange="this.form.submit()" />
+                  <label for="checkboxId">
+                    <%=item.name %>
+                  </label>
+
+                  <input type="hidden" name="listName" value="<%= listTitle %>">
+                </form>
+
+              </li>
+              <%}) %>
+                <%}%>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <%- include("footer") %>
