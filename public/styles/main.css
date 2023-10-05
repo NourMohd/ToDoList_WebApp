@@ -73,9 +73,11 @@ nav a {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  
 }
 nav a:hover {
   color: white;
+  background-color: transparent;
 }
 
 nav .nav-link1::before {
@@ -128,6 +130,7 @@ input[type=checkbox]:checked + label {
   margin-right: 50px;
   color:gray;
   text-decoration: line-through;
+  width: 10px;
 }
 .additem {
   padding: 10px;
@@ -160,6 +163,11 @@ input[type=checkbox]:checked + label {
   background-color: #394867;
   cursor: pointer;
 }
+.textarea{
+  max-width:100%;
+  overflow: hidden;
+}
+
 .delete-form{
   display: flex;
   gap: 5px;

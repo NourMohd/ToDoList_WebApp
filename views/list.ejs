@@ -1,7 +1,7 @@
 <%- include("header") %>
   <div class="container">
     <form class="searchOrCreate" action="/searchOrCreateList" method="post">
-      <input type="text" placeholder="Search for list or Create" name="searchOrCreateText" , autocomplete="off" />
+      <input type="text" placeholder="Search for list or Create" name="searchOrCreateText" , autocomplete="off" required/>
       <button type="submit" name="searchOrCreateButton"><i class="fas fa-arrow-right fa-1x"></i></button>
     </form>
     <div class="main-pad">
@@ -25,7 +25,7 @@
                 <form class="delete-form" action="/delete" method="post">
                   <input type="checkbox" id="checkboxId" name="checkboxName" value="<%= item._id %>"
                     onchange="this.form.submit()" />
-                  <label for="checkboxId">
+                  <label class="textarea" for="checkboxId">
                     <%=item.name %>
                   </label>
 
