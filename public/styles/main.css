@@ -49,14 +49,17 @@ body {
   cursor: pointer;
 }
 .main-pad {
+  margin-left: 25px;
+  margin-right: 25px;
   background-color: black;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 5px;
   box-shadow: 5px 5px;
   max-width: 500px;
 }
 .listTitle {
   border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 ul {
@@ -110,8 +113,8 @@ p {
 .content {
   padding: 10px;
   background-color: #F1F6F9;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   min-height: 500px;
   /* max-width: 500px; */
 }
